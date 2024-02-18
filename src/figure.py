@@ -40,14 +40,6 @@ class Figure:
         if self.selected:
             pygame.draw.rect(screen, (0, 0, 0), piece_rect, 2)
 
-    def move(self) -> None:
-        """Moves figure on the screen(board)"""
-        ...
-
-    def remove(self) -> None:
-        """Removes figure from the screen(board)"""
-        ...
-
 
 def define_figures_position(squares: list) -> list[Figure]:
     # Convert a list to 8x8 matrix
