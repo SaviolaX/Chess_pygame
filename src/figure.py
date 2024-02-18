@@ -54,14 +54,13 @@ def define_figures_position(squares: list) -> list[Figure]:
     square_matrix = np.array(squares).reshape((8, 8))
 
     # Define mappings for pieces
-    white_high_pieces_mapping = Config.hight_pieces_mapping
-    white_low_pieces_mapping = Config.low_pieces_mapping
-    black_high_pieces_mapping = Config.hight_pieces_mapping
-    black_low_pieces_mapping = Config.low_pieces_mapping
+    high_pieces_mapping = Config.hight_pieces_mapping
+    # low_pieces_mapping = Config.hight_pieces_mapping # temp option to display hight peaces instead low
+    low_pieces_mapping = Config.low_pieces_mapping
 
     # Define positions for white and black figures
-    white_positions = [(0, white_high_pieces_mapping), (1, white_low_pieces_mapping)]
-    black_positions = [(-1, black_high_pieces_mapping), (-2, black_low_pieces_mapping)]
+    white_positions = [(0, high_pieces_mapping), (1, low_pieces_mapping)]
+    black_positions = [(-1, high_pieces_mapping), (-2, low_pieces_mapping)]
 
     result = []
 
