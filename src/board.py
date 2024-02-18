@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 from .figure import Figure
 from .constants import Config, RGBColors
-from .moves import pawn
+from .moves import pawn, rook
 
 pygame.font.init()
 
@@ -148,10 +148,14 @@ class BoardInteraction:
         mouse_y: float,
         figure: Figure,
     ) -> list[Square]:
+        # TODO Fing the way to avoid many "IF" statements
         if figure is not None:
             if figure.name == "PAWN":
                 pawn.highlight_move(mouse_x, mouse_y, figure, self)
                 pawn.highlight_attack(mouse_x, mouse_y, figure, self)
+            if figure.name == 'ROOK':
+                rook.highlight_move(mouse_x, mouse_y, figure, self)
+                rook.highlight_attack(mouse_x, mouse_y, figure, self)
 
     def move_figure(self, figure: Figure, square: Square) -> None:       
             

@@ -16,6 +16,9 @@ pygame.display.set_caption("Chess")
 screen.fill(RGBColors.LIGHT_BROWN.value)
 
 
+# TODO: Create a dict to contain all figures moves in one place 
+# to pass it into BoardInteraction class
+
 squares_list = define_squares_position()
 figures_list = define_figures_position(squares_list)
 
