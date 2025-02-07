@@ -26,6 +26,7 @@ board_interaction = BoardInteraction(squares=squares_list, figures=figures_list)
 
 captured_figures = []
 
+sfsfsf = 0
 
 class ChessGame:
     running = True
