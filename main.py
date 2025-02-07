@@ -19,14 +19,15 @@ screen.fill(RGBColors.LIGHT_BROWN.value)
 squares_list = define_squares_position()
 figures_list = define_figures_position(squares_list)
 
+
 board_renderer = BoardRenderer(
     screen=screen, squares=squares_list, figures=figures_list
 )
 board_interaction = BoardInteraction(squares=squares_list, figures=figures_list)
 
+
 captured_figures = []
 
-sfsfsf = 0
 
 class ChessGame:
     running = True
